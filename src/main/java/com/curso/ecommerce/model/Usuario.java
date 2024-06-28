@@ -30,7 +30,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(Integer id, String nombre, String username, String email, String direccion, String telefono, String tipo, String password, List<Producto> productos, List<Orden> ordenes) {
+    public Usuario(Integer id, String nombre, String username, String email, String direccion, String telefono, String tipo, String password) {
         this.id = id;
         this.nombre = nombre;
         this.username = username;
@@ -39,8 +39,6 @@ public class Usuario {
         this.telefono = telefono;
         this.tipo = tipo;
         this.password = password;
-        this.productos = productos;
-        this.ordenes = ordenes;
     }
 
     public Integer getId() {
@@ -134,8 +132,6 @@ public class Usuario {
                 ", telefono='" + telefono + '\'' +
                 ", tipo='" + tipo + '\'' +
                 ", password='" + password + '\'' +
-                ", productos=" + productos +
-                ", ordenes=" + ordenes +
                 '}';
     }
 }

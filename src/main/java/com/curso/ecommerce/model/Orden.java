@@ -28,14 +28,12 @@ public class Orden {
     public Orden() {
     }
 
-    public Orden(Integer id, String numero, Date fechaCreacion, Date fechaRecibida, Double total, Usuario usuario, DetalleOrden detalleOrden) {
+    public Orden(Integer id, String numero, Date fechaCreacion, Date fechaRecibida, Double total) {
         this.id = id;
         this.numero = numero;
         this.fechaCreacion = fechaCreacion;
         this.fechaRecibida = fechaRecibida;
         this.total = total;
-        this.usuario = usuario;
-        this.detalleOrden = detalleOrden;
     }
 
     public Integer getId() {
@@ -102,8 +100,6 @@ public class Orden {
                 ", fechaCreacion=" + fechaCreacion +
                 ", fechaRecibida=" + fechaRecibida +
                 ", total=" + total +
-                ", usuario=" + usuario +
-                ", detalleOrden=" + detalleOrden +
                 '}';
     }
 }

@@ -25,14 +25,12 @@ public class DetalleOrden {
     public DetalleOrden() {
     }
 
-    public DetalleOrden(Integer id, String nombre, Double cantidad, Double precio, Double total, Orden orden, Producto producto) {
+    public DetalleOrden(Integer id, String nombre, Double cantidad, Double precio, Double total) {
         this.id = id;
         this.nombre = nombre;
         this.cantidad = cantidad;
         this.precio = precio;
         this.total = total;
-        this.orden = orden;
-        this.producto = producto;
     }
 
     public Integer getId() {
@@ -99,8 +97,6 @@ public class DetalleOrden {
                 ", cantidad=" + cantidad +
                 ", precio=" + precio +
                 ", total=" + total +
-                ", orden=" + orden +
-                ", producto=" + producto +
                 '}';
     }
 }

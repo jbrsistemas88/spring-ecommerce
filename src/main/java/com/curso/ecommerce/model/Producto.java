@@ -98,7 +98,6 @@ public class Producto {
                 ", imagen='" + imagen + '\'' +
                 ", precio=" + precio +
                 ", cantidad=" + cantidad +
-                ", usuario=" + usuario +
                 '}';
     }
 }
