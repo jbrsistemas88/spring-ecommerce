@@ -60,6 +60,22 @@ public class HomeController {
         Optional<Producto> optionalProducto = productoService.get(id);
         LOGGER.info("Producto añadido: {}", optionalProducto.get());
         LOGGER.info("Cantidad: {}", cantidad);
+        producto=optionalProducto.get();
+
+        detalleOrden.setCantidad(cantidad);
+        detalleOrden.setPrecio(producto.getPrecio());
+        detalleOrden.setNombre(producto.getNombre());
+        detalleOrden.setTotal(producto.getPrecio()*cantidad);
+        detalleOrden.setProducto(producto);
+
+        detalleOrdenList.add(detalleOrden);
+
+        sumaTotal=detalleOrdenList.stream().mapToDouble(dt -> dt.getTotal()).sum();
+
+        orden.setTotal(sumaTotal);
+
+        model.addAttribute("cart", detalleOrdenList);
+        model.addAttribute("orden", orden);
 
         return "usuario/carrito";
     }
